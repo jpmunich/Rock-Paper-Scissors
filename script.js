@@ -1,11 +1,13 @@
 const rockButton = document.getElementById("rock-button");
 const paperButton = document.getElementById("paper-button");
 const scissorsButton = document.getElementById("scissors-button");
+const newPContainer = document.getElementById("new-p-container");
+
+const newP = document.createElement("p");
+newPContainer.appendChild(newP);
 
 function createTheElement(text) {
-    const newP = document.createElement("p");
     newP.innerText = text;
-    document.body.appendChild(newP);
     newP.setAttribute("class", "newP")
 }
 
@@ -59,9 +61,9 @@ rockButton.addEventListener("click", function() {
 });
 
 paperButton.addEventListener("click", function() {
-    playGame("rock", Math.floor(Math.random() * 3));
+    playGame("paper", Math.floor(Math.random() * 3));
 });
 
 scissorsButton.addEventListener("click", function() {
-    playGame("rock", Math.floor(Math.random() * 3));
+    playGame("scissors", Math.floor(Math.random() * 3));
 });

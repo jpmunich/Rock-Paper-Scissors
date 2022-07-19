@@ -7,15 +7,18 @@ h1 {
 }
 
 .button-container {
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
+    flex-grow: 1;
     padding: 10px 15px 10px 15px;
 }
 
-.newP {
-    text-align: center;
+#new-p-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
